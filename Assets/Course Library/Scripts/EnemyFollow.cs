@@ -19,5 +19,8 @@ public class EnemyFollow : MonoBehaviour
     {
         Vector3 ld = (p.transform.position-transform.position).normalized;
         rb.AddForce(ld*speed);
+        if(transform.position.y < -10){
+            Destroy(gameObject);
+        }
     }
 }
